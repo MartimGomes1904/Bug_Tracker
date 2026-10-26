@@ -1,0 +1,74 @@
+{
+  "name": "bug-tracker-bg",
+  "displayName": "Bug Tracker (.bg)",
+  "description": "Editor visual para ficheiros .bg: uma tabela de bugs com estado, prioridade, filtros e edição.",
+  "version": "0.2.1",
+  "publisher": "MartimGomes",
+  "icon": "icons/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartimGomes1904/Bug_Tracker.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "workspaceContains:**/*.bg"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bg",
+        "aliases": [
+          "Bug Tracker",
+          "bg"
+        ],
+        "extensions": [
+          ".bg"
+        ],
+        "icon": {
+          "light": "./icons/bg.svg",
+          "dark": "./icons/bg.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bg",
+        "scopeName": "source.bg",
+        "path": "./syntaxes/bg.tmLanguage.json"
+      }
+    ],
+    "customEditors": [
+      {
+        "viewType": "bugTracker.editor",
+        "displayName": "Bug Tracker",
+        "selector": [
+          {
+            "filenamePattern": "*.bg"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "bugTracker.newFile",
+        "title": "Bug Tracker: Novo ficheiro .bg"
+      },
+      {
+        "command": "bugTracker.openMain",
+        "title": "Bug Tracker: Abrir lista de bugs"
+      },
+      {
+        "command": "bugTracker.openAsText",
+        "title": "Bug Tracker: Abrir como texto (JSON)"
+      }
+    ]
+  }
+}

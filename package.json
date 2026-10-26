@@ -1,7 +1,0 @@
-name: identificador da extensão.
-displayName: nome apresentado no Marketplace.
-description: descrição.
-version: versão atual.
-publisher: identificador do publicador.
-engines.vscode: versão mínima do VS Code suportada.
-repository: endereço do repositório, se existir.
