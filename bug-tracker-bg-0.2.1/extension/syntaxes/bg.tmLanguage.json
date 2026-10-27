@@ -1,9 +1,0 @@
-{
-  "scopeName": "source.bg",
-  "name": "Bug Tracker",
-  "patterns": [
-    {
-      "include": "source.json"
-    }
-  ]
-}
